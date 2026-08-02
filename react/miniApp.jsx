@@ -1,16 +1,25 @@
-import React, { useRef, } from 'react';
+import React, { useRef, useEffect } from 'react';
 import AtomIcon from './AtomIcon.jsx';
 import RUser from "./RUser";
 
 const MiniApp = () => {
+
+
   const textareaRef = useRef(null);
 
   const handleInput = (e) => {
     const textarea = e.target;
+    const maxHeight = 580; // из CSS
+
     textarea.style.height = 'auto';
     textarea.style.height = textarea.scrollHeight + 'px';
-  };
 
+    if (textarea.scrollHeight >= maxHeight) {
+      textarea.style.overflowY = 'auto';
+    } else {
+      textarea.style.overflowY = 'hidden';
+    }
+  };
   return (
     <>
 

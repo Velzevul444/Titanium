@@ -2,6 +2,10 @@
 	color: white ;
 	background-color: black;
 }
+body{
+min-width: 1200px;
+	overflow-y: hidden;
+}
 #note {
 	width: 455px;
 	height: 800px;
@@ -33,11 +37,12 @@
 	text-align: center;
 	resize: none;
 	caret-color: transparent;
+	overflow: hidden;
+	line-height: 80px;
 }
 .NameNote::placeholder{
 	color:white;
-	padding-top: 30px;
-	padding-bottom: 30px;
+
 }
 .WriteNote{
 	min-width: 385px;
@@ -53,11 +58,13 @@
 	resize: none;
 	text-align: center;
 	caret-color: transparent;
+	overflow-y: hidden;
+
 }
 .WriteNote::placeholder{
+	line-height: 80px;
 	color:white;
-	padding-top: 30px;
-	padding-bottom: 30px;
+
 }
 .User{
 	top: 20px;
