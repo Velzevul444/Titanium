@@ -24,6 +24,8 @@
 	left: 47%;
 	font-size: 30px;
 	background: #1E1E1E;
+	user-select: none;
+
 }
 
 .Email{
@@ -67,4 +69,17 @@
 	background: #2b2d2b;
 	border-radius: 40px;
 	border: none;
+}
+.REpassword{
+	width: 350px;
+	height: 60px;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 30px;
+	background: #2b2d2b;
+	border-radius: 40px;
+	border: none;
+	text-align: center;
 }
