@@ -5,6 +5,11 @@ const RUser = () => {
 	const autOff = () => {
 		setShowAuth(!showAuth);
 	};
+	const [showLog, setShowLog] = useState(false);
+	const logOff = () => {
+		setShowLog(!showLog);
+	};
+
 
 	return (
 		<div className="rUser">
@@ -27,15 +32,20 @@ const RUser = () => {
 
 			{showAuth && (
 				<div className="Authorization">
-					<div className="AuthHeader">
-						<div className="Login">Login or</div>
-						<div className="Registration">Registration</div>
-					</div>
+					<div className="Login" onClick={() => logOff()}>Login or</div>
+					<div className="Registration" onClick={() => logOff()}>Registration</div>
 					<input
 						className="Email"
 						type="Email"
-						placeholder="Email"
+						placeholder="&nbsp;Email"
 					/>
+					<input
+						className="Password"
+						type="Password"
+						placeholder="&nbsp;Password"
+					/>
+					<button className={"ButtonL"}>Login</button>
+
 				</div>
 			)}
 		</div>

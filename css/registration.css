@@ -4,63 +4,67 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 420px;
-	min-height: 450px;
-	background: #2b2d2b;
+	min-height: 420px;
+	background: #1E1E1E;
 	border-radius: 40px;
-	padding: 40px;
 	z-index: 99;
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	gap: 20px;
-	box-sizing: border-box;
-
 }
-
-.AuthHeader {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	gap: 8px;
-}
-
-.Login,
-.Registration {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: white;
-	text-align: center;
-	background: #2b2d2b;
-	padding: 6px 12px;
-	border-radius: 12px;
-}
-
-.Login {
-	height: auto;
-	width: auto;
+.Login{
+	position: absolute;
+	top: 12%;
+	left: 20%;
 	font-size: 30px;
+	background: #1E1E1E;
+	user-select: none;
 }
-
-.Registration {
-	height: auto;
-	width: auto;
+.Registration{
+	position: absolute;
+	top: 12%;
+	left: 47%;
 	font-size: 30px;
+	background: #1E1E1E;
 }
 
 .Email{
-	width: 385px;
-	height: 80px;
-	margin: auto auto 20px 35px;
+	height: 60px;
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 30px;
+	background: #2b2d2b;
 	border-radius: 40px;
-	background-color: #2b2d2b;
-	font-size: 20px;
+	border: none;
+	width: 350px;
+	text-align: center;
+
+
+}
+.Password{
+	width: 350px;
+	height: 60px;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 30px;
+	background: #2b2d2b;
+	border-radius: 40px;
 	border: none;
 	text-align: center;
-	resize: none;
-	caret-color: transparent;
-	overflow: hidden;
-	line-height: 80px;
+
+}
+.ButtonL{
+	width: 350px;
+	text-align: center;
+	height: 60px;
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 30px;
+	background: #2b2d2b;
+	border-radius: 40px;
+	border: none;
 }

@@ -83,7 +83,8 @@ min-width: 1200px;
 	height: 385px;
 	position: absolute;
 	top: 30%;
-	right: 30%;
+	left: 40%;
+	transform: translate(-50%, -50%);
 
 	cursor: pointer;
 	border-radius: 50%;
