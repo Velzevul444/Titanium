@@ -1,3 +1,13 @@
+.User{
+	top: 20px;
+	right: 20px;
+	position: absolute;
+}
+.User:active{
+	background-color: #1c1e1c;
+	transform: scale(1.10);
+}
+
 .Authorization {
 	position: absolute;
 	top: 50%;
@@ -60,6 +70,7 @@
 .ButtonL{
 	width: 350px;
 	text-align: center;
+	line-height: 60px;
 	height: 60px;
 	position: absolute;
 	top: 75%;
