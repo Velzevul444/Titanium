@@ -7,22 +7,26 @@ const TreeNote = () => {
 			setNewElectron(!NewCore);
 	}
 
-	const [PutColor, setPutColor] = useState("true");
-	const SColor = () => {
+	const [PutColor, setPutColor] = useState(false);
+	const Color = () => {
 		setPutColor(!PutColor);
 	}
+	const [positionRight, setPositionRight] = useState(false);
+	const position = () => {
+		setPositionRight(!positionRight);
+	}
 
-
-	return (
-		<div className="treeNote">
+	return (<>
+			<button style={{left: positionRight  ? "96% ": "70%"}} className={"ButtonRight"} onClick={() => position()}></button>
+		<div style={{left: positionRight  ? "111% ": "85%"}} className="treeNote">
 			<div style={{ border: NewCore ? "2px solid white" : "none" }} className={"NewCore"} onClick={() => choice()}>New core</div>
 			<div style={{ border: NewCore ? "none" : "2px solid white" }} className={"NewElectron"} onClick={() => choice()}>New electron</div>
 			<div className={"NewBond"}>Bond notes</div>
-			<div className={"SetColor"} onClick={() => SColor()}>Set color to note </div>
+			<div className={"SetColor"} onClick={() => Color()}>Set color to note </div>
 			{PutColor && (
 				<input type={"color"} className={"PutColor"} />
 			)}
-		</div>
+		</div></>
 	)
 }
 export default TreeNote;
