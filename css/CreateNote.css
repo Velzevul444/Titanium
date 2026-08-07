@@ -1,9 +1,12 @@
 #note {
+	position: absolute;
 	width: 455px;
 	height: 800px;
 	border-radius: 40px;
-	margin: 100px 20px;
 	background-color: #1E1E1E;
+	top: 50%;
+	left: 15%;
+	transform: translate(-50%, -50%);
 }
 .CreateNewNote {
 	width: 385px;
