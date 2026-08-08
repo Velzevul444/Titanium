@@ -5,6 +5,7 @@
 body{
 min-width: 1200px;
 	overflow-y: hidden;
+	overflow-x: hidden;
 }
 
 

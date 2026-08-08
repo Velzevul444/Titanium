@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, {useRef, useState} from "react";
 
 const CreateNote = () => {
 
@@ -17,8 +17,18 @@ const CreateNote = () => {
 			textarea.style.overflowY = 'hidden';
 		}
 	};
+	const [positionRight, setPositionRight] = useState(false);
+	const position = () => {
+		setPositionRight(!positionRight);
+	}
+
 	return (<>
-		<div id="note">
+		<button
+			style={{left: positionRight ? "4% " : "30%"}}
+			className={"ButtonRight"}
+			onClick={() => position()}
+		></button>
+		<div id="note" style={{left: positionRight ? "-11% " : "15%"}}>
 			<button className={"CreateNewNote"}>Create new note</button>
 			<textarea
 				className="NameNote"

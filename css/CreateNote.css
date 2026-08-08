@@ -7,6 +7,17 @@
 	top: 50%;
 	left: 15%;
 	transform: translate(-50%, -50%);
+
+}
+.ButtonRight{
+	top: 13%;
+	transform: translate(-50%, -50%);
+	width: 60px;
+	height: 60px;
+	background-color: #2b2d2b;
+	border-radius: 50%;
+	position: absolute;
+	border: none;
 }
 .CreateNewNote {
 	width: 385px;
