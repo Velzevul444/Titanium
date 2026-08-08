@@ -1,16 +1,14 @@
 import React, {useRef, useState} from "react";
 import RPointer from "../svg/RPointer";
 import LPointer from "../svg/Lpointer";
-const CreateNote = () => {
-
-	const textareaRef = useRef(null);
+const CreateNote = (props) => {
+ const {Cores, setCores} = props;
 
 	const [NameCore, setNameCore] = useState("");
 	const [BioCore, setBioCore] = useState("");
-	const [Cores, setCores] = useState([]);
 	const createCore = () => {
 		const newCore = {NameCore, BioCore};
-		setCores(...Cores, newCore);
+		setCores([...Cores, newCore]);
 		setNameCore("");
 		setBioCore("");
 	}
@@ -45,7 +43,7 @@ const CreateNote = () => {
 		<div id="note" style={{left: positionRight ? "-11% " : "15%"}}>
 			<button
 				className={"CreateNewNote"}
-				onClick={() => createCore}
+				onClick={() => createCore()}
 			>Create new note
 			</button>
 			<textarea
