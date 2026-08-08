@@ -5,15 +5,15 @@ const CreateNote = () => {
 
 	const textareaRef = useRef(null);
 
-	const [createCore, setCreateCore] = useState(null);
-
-
-
-
-
-
-
-
+	const [NameCore, setNameCore] = useState("");
+	const [BioCore, setBioCore] = useState("");
+	const [Cores, setCores] = useState([]);
+	const createCore = () => {
+		const newCore = {NameCore, BioCore};
+		setCores(...Cores, newCore);
+		setNameCore("");
+		setBioCore("");
+	}
 
 	const handleInput = (e) => {
 		const textarea = e.target;
@@ -45,18 +45,20 @@ const CreateNote = () => {
 		<div id="note" style={{left: positionRight ? "-11% " : "15%"}}>
 			<button
 				className={"CreateNewNote"}
-				onClick={() => {}}
+				onClick={() => createCore}
 			>Create new note
 			</button>
 			<textarea
 				className="NameNote"
 				placeholder="Enter name note"
+				onChange={(e) => setNameCore(e.target.value)}
 			/>
 			<textarea
-				ref={textareaRef}
+				onInput={handleInput}
 				className="WriteNote"
 				placeholder="Write note"
-				onInput={handleInput}
+				onChange={(e) => setBioCore(e.target.value)}
+
 			/>
 		</div>
 	</>)
