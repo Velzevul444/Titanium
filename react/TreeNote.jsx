@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import LPointer from "../svg/Lpointer";
+import RPointer from "../svg/RPointer";
 const TreeNote = () => {
 
 
@@ -17,7 +19,7 @@ const TreeNote = () => {
 	}
 
 	return (<>
-			<button style={{left: positionRight  ? "96% ": "70%"}} className={"ButtonRight"} onClick={() => position()}></button>
+			<button style={{left: positionRight  ? "96% ": "70%",backgroundColor: "black",}} className={"ButtonRight"} onClick={() => position()}>{positionRight ? <RPointer /> : <LPointer />}</button>
 		<div style={{left: positionRight  ? "111% ": "85%"}} className="treeNote">
 			<div style={{ border: NewCore ? "2px solid white" : "none" }} className={"NewCore"} onClick={() => choice()}>New core</div>
 			<div style={{ border: NewCore ? "none" : "2px solid white" }} className={"NewElectron"} onClick={() => choice()}>New electron</div>

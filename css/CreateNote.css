@@ -14,11 +14,12 @@
 	transform: translate(-50%, -50%);
 	width: 60px;
 	height: 60px;
-	background-color: #2b2d2b;
+	background-color: black;
 	border-radius: 50%;
 	position: absolute;
 	border: none;
 }
+
 .CreateNewNote {
 	width: 385px;
 	height: 80px;
